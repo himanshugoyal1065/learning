@@ -7,7 +7,14 @@ import {Server} from '../Server'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  serverElements = [new Server('server','himanshu','him')];
+  serverElements:Server[]= [new Server('server','himanshu','him')];
   
- 
+  onDataReceived(serverElement:Server){
+    if(serverElement===null){
+      this.serverElements=[];
+    }
+    else{
+    this.serverElements.push(serverElement);
+    }
+  }
 }
