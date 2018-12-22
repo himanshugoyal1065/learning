@@ -1,0 +1,11 @@
+<div class="container">
+ <app-cockpit (dataPasser)="onDataReceived($event)"></app-cockpit>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12">
+     <app-server  *ngFor="let element of serverElements" [s]="element">
+     </app-server>
+      
+    </div>
+  </div>
+</div>
